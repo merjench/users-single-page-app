@@ -7,9 +7,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @q = User.ransack(params[:q])
-    @users = @q.result.page(params[:page]).per_page(10)
-    # @pagy, @users = pagy(User.all.order('updated_at DESC'), items: 10)
-    # @pagy, @users = pagy(User.all.order('updated_at DESC'), items: 10)
+    @users = @q.result.page(params[:page]).per_page(10).order('updated_at DESC')
   end
 
   # GET /users/1
