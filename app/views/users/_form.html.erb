@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+    <%= form.label :name, "Name" %>
+    <%= form.text_field :name, class: "form-control", placeholder:"Enter Name" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: "form-control", placeholder:"Enter Email" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "form-control", placeholder:"Enter Job Title" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :phone_number %>
-    <%= form.text_field :phone_number %>
+    <%= form.text_field :phone_number, class: "form-control", placeholder:"Enter Phone Number" %>
   </div>
 
-  <div class="field">
+  <div class="form-group form-control-sm">
     <%= form.label :active %>
     <%= form.select :active, [['Active', true], ['Inactive', false]] %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
