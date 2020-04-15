@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def index
     # @q = User.ransack(params[:q])
 
-    @pagy, @users = pagy(User.all, items: 20)
+    @pagy, @users = pagy(User.all.order('updated_at DESC'), items: 10)
     # @users = User.all
   end
 
@@ -24,6 +24,11 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
   end
+
+  def sorted
+    @@sorted = User.all.sort
+  end
+
 
   # POST /users
   # POST /users.json

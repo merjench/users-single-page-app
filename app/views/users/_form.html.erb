@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :active %>
-    <%= form.check_box :active %>
+    <%= form.select :active, [['Active', true], ['Inactive', false]] %>
   </div>
 
   <div class="actions">

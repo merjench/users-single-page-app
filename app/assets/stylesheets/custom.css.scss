@@ -1,13 +1,40 @@
 @import "bootstrap/dist/css/bootstrap";
 
-// .navbar {
-//   background-color: #fdf6ea !important;
-// }
+.navbar {
+  background-color: rgb(165, 184, 202) !important;
+}
+
+a.btn.btn-primary.btn-user {
+  color: #fff;
+  margin-left: 165px;
+}
 
 // .navbar-brand {
 //   font-size: 3rem;
 // }
 
 // h1 {
+//   color: rgb(133, 10, 10);
+// }
+
+// .active,
+// .inactive {
+//   visibility: hidden;
+//   position: absolute;
+// }
+
+// .active:after {
+//   visibility: visible;
+//   position: absolute;
+//   left: 10px;
+//   content: "Active";
+//   color: green;
+// }
+
+// .inactive:after {
+//   visibility: visible;
+//   position: absolute;
+//   left: 10px;
+//   content: "Inactive";
 //   color: red;
 // }
