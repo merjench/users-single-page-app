@@ -2,13 +2,14 @@ class UsersController < ApplicationController
 
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+
   # GET /users
   # GET /users.json
   def index
-    # @q = User.ransack(params[:q])
-
-    @pagy, @users = pagy(User.all.order('updated_at DESC'), items: 10)
-    # @users = User.all
+    @q = User.ransack(params[:q])
+    @users = @q.result.page(params[:page]).per_page(10)
+    # @pagy, @users = pagy(User.all.order('updated_at DESC'), items: 10)
+    # @pagy, @users = pagy(User.all.order('updated_at DESC'), items: 10)
   end
 
   # GET /users/1
@@ -23,10 +24,6 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-  end
-
-  def sorted
-    @@sorted = User.all.sort
   end
 
 

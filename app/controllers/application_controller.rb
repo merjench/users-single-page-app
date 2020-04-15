@@ -1,3 +1,5 @@
 class ApplicationController < ActionController::Base
-    include Pagy::Backend
+    def set_search
+        @q=User.search(params[:q])
+    end
 end

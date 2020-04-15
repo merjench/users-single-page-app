@@ -23,13 +23,13 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # pagination 
-gem 'pagy'
+# gem 'pagy'
 
 # fake seed 
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 gem 'ransack'
-
+gem 'will_paginate-bootstrap4'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

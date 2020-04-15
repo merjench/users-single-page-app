@@ -1,5 +1,4 @@
 module ApplicationHelper
-    include Pagy::Frontend
 
     def bootstrap_class_for(flash_type)
         {

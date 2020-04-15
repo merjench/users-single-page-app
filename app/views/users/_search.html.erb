@@ -1,0 +1,8 @@
+<%= search_form_for @q do |f| %>
+<%# <%= f.label :name, "Search" %> 
+<br><br>
+<%= f.text_field :name_cont, class:'form-control', placeholder: "Search..." %>
+<br>
+<%= f.submit class: 'btn btn-primary' %>
+<%= link_to "Clear", request.path, class: "btn btn-secondary" %>
+<% end %>
