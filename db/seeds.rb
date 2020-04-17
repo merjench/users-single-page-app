@@ -7,22 +7,12 @@ require 'faker'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-25.times do 
+1000.times do 
     User.create(
         name: Faker::Name.name,
         email: Faker::Internet.unique.email,
         title: Faker::Job.title,
         phone_number: Faker::PhoneNumber.cell_phone,
-    )
-end 
-
-25.times do 
-    User.create(
-        name: Faker::Name.name,
-        email: Faker::Internet.unique.email,
-        title: Faker::Job.title,
-        phone_number: Faker::PhoneNumber.cell_phone,
-        active: false,
+        active: Faker::Boolean.boolean,
     )
 end 
